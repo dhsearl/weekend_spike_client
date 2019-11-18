@@ -1,6 +1,6 @@
 import { put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
-const serverUrl = 'https://weekend-spike-server.herokuapp.com/api/poll'
+const serverUrl = 'https://weekend-spike-server.herokuapp.com/'
 
 function* fetchInformationSaga(action){
     try {
