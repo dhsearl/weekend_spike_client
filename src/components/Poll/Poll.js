@@ -17,10 +17,10 @@ class Poll extends Component {
         console.log('Called componentDidRerender');
     }
     componentDidMount() {
-        // this.props.dispatch({
-        //     type: 'FETCH_STATUS',
-        //     payload: { url: this.props.match.params.route }
-        // })
+        this.props.dispatch({
+            type: 'FETCH_STATUS',
+            payload: { url: this.props.match.params.route }
+        })
 
     }
     render() {
