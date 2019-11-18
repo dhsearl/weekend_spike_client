@@ -1,0 +1,12 @@
+.centered{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputDarkMode{
+    height: 2rem;
+    font-size: large;
+    background-color: #121212;
+    color: #CCC;
+}
