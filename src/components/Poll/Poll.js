@@ -17,10 +17,10 @@ class Poll extends Component {
         console.log('Called componentDidRerender');
     }
     componentDidMount() {
-        this.props.dispatch({
-            type: 'FETCH_STATUS',
-            payload: { url: this.props.match.params.route }
-        })
+        // this.props.dispatch({
+        //     type: 'FETCH_STATUS',
+        //     payload: { url: this.props.match.params.route }
+        // })
 
     }
     render() {
@@ -32,7 +32,7 @@ class Poll extends Component {
                     <h1>I'm a poll</h1>
                     <h3>{poll_name}</h3>    
                     <IntervalRenderer
-                interval={3000}
+                interval={30000}
                 shouldComponentRerender={this.handleShouldRerenderChild}
                 componentDidRerender={this.handleChildDidRerender}
             >
