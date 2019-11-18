@@ -32,7 +32,7 @@ class Poll extends Component {
                     <h1>I'm a poll</h1>
                     <h3>{poll_name}</h3>    
                     <IntervalRenderer
-                interval={500}
+                interval={3000}
                 shouldComponentRerender={this.handleShouldRerenderChild}
                 componentDidRerender={this.handleChildDidRerender}
             >
