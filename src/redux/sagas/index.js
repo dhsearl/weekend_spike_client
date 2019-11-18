@@ -1,10 +1,10 @@
 import { put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
-
+const serverUrl = 'https://weekend-spike-server.herokuapp.com/api/poll'
 
 function* fetchInformationSaga(action){
     try {
-        const status = yield axios.get(`/api/route/${action.payload.url}`);
+        const status = yield axios.get(`${serverUrl}/api/route/${action.payload.url}`);
         yield put({type:"SET_STATUS",payload: status});
     } catch (error) {
         console.log('ERROR in pollInformation Saga', error);
@@ -14,7 +14,7 @@ function* fetchInformationSaga(action){
 function* addRouteSaga(action) {
     try {
         
-        yield axios.post('/api/route',action.payload);
+        yield axios.post(`${serverUrl}/api/route`,action.payload);
         yield put({type:'CLEAR_INPUT'});
         
         const route = action.payload.newRouteInput;

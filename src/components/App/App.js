@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Poll from '../Poll/Poll';
 import Input from '../Input/Input';
-import { HashRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom'
 import './App.css';
 import crypto from 'crypto'
 
