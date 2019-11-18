@@ -9,6 +9,7 @@ import crypto from 'crypto'
 class App extends Component {
 
     componentWillMount(){
+        this.props.dispatch({type:"WAKE_HEROKU"});
         if (localStorage.id){
             this.props.dispatch({type:"SET_ID", payload: localStorage.id})
         } else {

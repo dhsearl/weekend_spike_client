@@ -11,6 +11,15 @@ function* fetchInformationSaga(action){
     }
 }
 
+function* wakeUpHeroku(){
+    try{
+        yield axios.get(`${serverUrl}/thing1`)
+    } catch (e) {
+        console.log('Heroku Wakup Failed', e);
+        
+    }
+}
+
 function* addRouteSaga(action) {
     try {
         
@@ -33,6 +42,7 @@ function* addRouteSaga(action) {
 function* rootSaga() {
     yield takeEvery('ADD_ROUTE', addRouteSaga);
     yield takeEvery('FETCH_STATUS', fetchInformationSaga);
+    yield takeEvery('WAKE_HEROKU', wakeUpHeroku);
   }
   
   export default rootSaga;
